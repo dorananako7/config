@@ -41,3 +41,23 @@ vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], {
   silent = true,
   desc = "Exit terminal mode",
 })
+
+-- 選択した文字を削除しても、コピー内容を上書きしない
+
+vim.keymap.set("x", "d", '"_d', {
+  desc = "Delete without yanking",
+  silent = true,
+  remap = false,
+})
+
+vim.keymap.set("x", "<Del>", '"_d', {
+  desc = "Delete without yanking",
+  silent = true,
+  remap = false,
+})
+
+vim.keymap.set("x", "x", '"_d', {
+  desc = "Delete without yanking",
+  silent = true,
+  remap = false,
+})
